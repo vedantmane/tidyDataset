@@ -39,4 +39,5 @@ final_DataSet <- cbind(X, activity_label, SUB)
 str(final_DataSet)
 tidyData <- final_DataSet %>% group_by(activity_label, subject) %>% summarize_each(funs(mean))
 tidyData
-write.table(tidyData, file = "./UCI HAR Dataset/tidydata.txt", row.names = FALSE, col.names = TRUE)
+
+write.table(tidyData, file = "./tidyDataset/tidydata.txt", row.names = FALSE, col.names = TRUE)
