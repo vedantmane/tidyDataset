@@ -22,7 +22,7 @@ Y <- rbind(Y_train, Y_test)
 SUB <- rbind(Sub_train, Sub_test)
 
 #Extracing measurements on the mean and standard deviation for each measurement
-select_features <- features[grep("mean()|std()", features[,2]),]
+select_features <- features[grep("mean\\(\\)|std\\(\\)", features[,2]),]
 
 #Keeping only the selcted features in our DataSet
 X <- X[,select_features[,1]]
